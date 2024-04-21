@@ -1,4 +1,5 @@
-import { isPriceInRange } from './votreModule'; 
+import { isPriceInRange } from '../exercice3'; 
+import { test, expect } from 'vitest';
 // Cas de test pour une plage valide
 test('Le prix 50 est dans la plage de 20 à 100', () => {
   expect(isPriceInRange(50, 20, 100)).toBe(true);
@@ -23,7 +24,7 @@ test('Le prix 15 est en dehors de la plage de 20 à 100', () => {
 
 // Cas de test pour des plages particulières
 test('Le prix 0 est en dehors de la plage de -10 à 10 (plage négative)', () => {
-  expect(isPriceInRange(0, -10, 10)).toBe(false);
+  expect(isPriceInRange(0, -10, 10)).toBe(true);
 });
 
 test('Le prix 5 est dans la plage de -10 à 10 (plage négative)', () => {
